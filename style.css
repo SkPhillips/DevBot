@@ -1,0 +1,218 @@
+body {
+	background-color: #6b3fa0;
+}
+
+.robot {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+
+}
+
+.bulb {
+	justify-content: center;
+	width: 10px;
+	height: 10px;
+	background-color: lavender;
+	opacity: 0.3;
+	border-radius: 8px;
+	position: absolute;
+}
+
+.glow {
+	box-shadow: 0 0 60px 30px #fff, 0 0 30px 10px #f0f;
+	animation: MoveUpDownBulb 1.45s linear infinite, easeIn 2s linear infinite;
+}
+
+@keyframes MoveUpDownBulb {
+	0%,
+	100% {
+		top: 10px;
+	}
+	50% {
+		top: -10px;
+	}
+}
+
+@keyframes easeIn {
+	0%,
+	100% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+.antenna {
+	width: 6px;
+	height: 40px;
+	background-color: white;
+	border-radius: 2px 2px 0px 0px;
+	position: absolute;
+	top: 10px;
+}
+
+.antenna-awaken {
+	animation: MoveAntenna 1.45s linear infinite;
+}
+
+@keyframes MoveAntenna {
+	0%,
+	100% {
+		top: 20px;
+	}
+	50% {
+		top: 0;
+	}
+}
+
+.head {
+	height: 50px;
+	width: 105px;
+	background-color: white;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 40px;
+}
+
+.head-awaken {
+	animation: MoveUpDownHead 1.45s linear infinite;
+}
+
+@keyframes MoveUpDownHead {
+	0%,
+	100% {
+		top: 50px;
+	}
+	50% {
+		top: 30px;
+	}
+}
+
+.mask {
+	height: 25px;
+	width: 75px;
+	background-color: #1f0b4a;
+	border-radius: 12.5px;
+	position: absolute;
+	top: 12px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.eyes {
+	margin: 4.5px 10px;
+	width: 16px;
+	height: 16px;
+	background-color: #d3bfff;
+	opacity: 0;
+	border-radius: 8px;
+}
+
+.eyes-awaken {
+	animation: openEyes 2s linear forwards;
+	opacity: 1;
+}
+
+@keyframes openEyes {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.torso {
+	background-color: white;
+	width: 110px;
+	height: 100px;
+	border-radius: 25px 25px 50px 50px;
+	position: absolute;
+	top: 100px;
+}
+
+.torso-awaken {
+	animation: MoveTorsoUpDown 1.45s linear infinite;
+}
+
+@keyframes MoveTorsoUpDown {
+	0%,
+	100% {
+		top: 110px;
+	}
+	50% {
+		top: 100px;
+	}
+}
+
+.activateButton {
+	width: 150px;
+	text-align: center;
+	text-decoration: unset;
+	padding: 15px 0px;
+	background: rebeccapurple;
+	border-radius: 25px;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 250px;
+	text-transform: uppercase;
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14.5px;
+	line-height: 16px;
+	letter-spacing: 2px;
+	color: #ffffff;
+	margin: auto;
+}
+
+button:focus{
+	outline: none;
+}
+
+.activateButton:hover,
+.activeButton:focus {
+	background-color: #8a57bd;
+	cursor: pointer;
+}
+
+.speech-bubble {
+	background-color: #ffff;
+	font-family: monospace;
+	padding: 15px;
+	width: 80px;
+	text-align: center;
+	margin-left: 300px;
+	border-radius: 10px;
+	position: relative;
+	opacity: 0.5;
+	display: none;
+	animation: fadeIn 2s; 
+	
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 0.5; }
+}
+
+
+.speech-bubble:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-right-color: #fff;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -15px;
+	margin-left: -15px;
+}
